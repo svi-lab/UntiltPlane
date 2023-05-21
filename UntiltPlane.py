@@ -5,7 +5,7 @@ from skimage import color, morphology, segmentation, exposure, filters
 from scipy import optimize
 
 
-class PlaneUntilt(object):
+class UntiltPlane(object):
     """Level the plane if the sample is tilted.
     
     Left click on the image to select the points which will be used to create
@@ -42,7 +42,7 @@ class PlaneUntilt(object):
     ---------
     ```
     # You just need to run something like:
-    >>>my_untilter = PlaneUntilt(data)
+    >>>my_untilter = UntiltPlane(data)
     # Then, if you want to recover the corrected data:
     >>>corrected_data = my.untilter.corrected_data
     # If you wish to reconstruct the offset plane:
@@ -146,5 +146,5 @@ class PlaneUntilt(object):
         # self.img.set_data(self.corrected_data)
         # self.img.set_clim(im_min, im_max)
         # plt.colorbar(self.img, ax=self.aximg)
-        self.axcorr.set_title("You can recover the corrected data with\n`my_PlaneUntilt.corrected_data`")
+        self.axcorr.set_title("You can recover the corrected data with\n`my_untilter.corrected_data`")
         self.fig.canvas.draw_idle()
