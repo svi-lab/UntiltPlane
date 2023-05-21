@@ -16,3 +16,8 @@ filename = os.path.join(folder, 'export_data_texte1.txt')
 raw = np.flipud(np.loadtxt(filename, delimiter=','))
 
 my_plane = UntiltPlane(raw)
+
+# %%
+######## Run the line below only afer you've finished the above ########
+########          (shift + enter to run cell by cell)           ########
+my_corrected_data = my_plane.corrected_data
