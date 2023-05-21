@@ -7,7 +7,7 @@ Created on Sun May 21 16:14:51 2023
 """
 import os
 import numpy as np
-from UntiltPlane import PlaneUntilt
+from UntiltPlane import UntiltPlane
 
 
 folder = os.path.realpath("../../Data_other/Apoline_Miguel/")
@@ -15,4 +15,4 @@ filename = os.path.join(folder, 'export_data_texte1.txt')
 # Load the data:
 raw = np.flipud(np.loadtxt(filename, delimiter=','))
 
-my_plane = PlaneUntilt(raw)
+my_plane = UntiltPlane(raw)
