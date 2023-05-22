@@ -13,8 +13,9 @@ from UntiltPlane import UntiltPlane
 folder = os.path.realpath("../../Data_other/Apoline_Miguel/")
 filename = os.path.join(folder, 'export_data_texte1.txt')
 # Load the data:
-raw = np.flipud(np.loadtxt(filename, delimiter=','))
+raw = np.loadtxt(filename, delimiter=',')
 
+# %%
 my_plane = UntiltPlane(raw)
 
 # %%
